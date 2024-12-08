@@ -1,0 +1,174 @@
+<style>
+/* Estilo base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: #2c3e50;
+    background-color: #f9f9f9;
+}
+
+/* Navegação única, estilo minimalista */
+.nav-container {
+    background: #2c3e50;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-items a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 0;
+    position: relative;
+}
+
+/* Efeito de linha animada sob os links */
+.nav-items a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e74c3c;
+    transition: width 0.3s;
+}
+
+.nav-items a:hover::after {
+    width: 100%;
+}
+
+/* Container principal com margens assimétricas */
+.container {
+    max-width: 900px;
+    margin: 100px auto 50px;
+    padding: 0 25px;
+}
+
+/* Seções com design único */
+.section {
+    margin-bottom: 60px;
+    background: white;
+    padding: 40px;
+    border-radius: 3px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+/* Detalhe visual lateral nas seções */
+.section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40px;
+    bottom: 40px;
+    width: 4px;
+    background: #e74c3c;
+    border-radius: 2px;
+}
+
+/* Títulos com estilo pessoal */
+.titulo-secao {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Parágrafos com espaçamento confortável */
+.paragrafo {
+    margin-bottom: 20px;
+    font-size: 1.05em;
+    color: #34495e;
+}
+
+/* Lista de formação estilizada */
+.formacao-lista {
+    list-style: none;
+}
+
+.formacao-item {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.formacao-item::before {
+    content: '•';
+    color: #e74c3c;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+}
+
+/* Formulário de contato com estilo único */
+.formulario {
+    display: grid;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.campo {
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 3px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.campo:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.btn-enviar {
+    background: #2c3e50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background: #34495e;
+}
+
+@media (max-width: 768px) {
+    .nav-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+
+    .section {
+        padding: 25px;
+    }
+
+    .section::before {
+        width: 3px;
+    }
+}
+</style>
